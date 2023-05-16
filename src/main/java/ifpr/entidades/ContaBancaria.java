@@ -1,4 +1,4 @@
-package ifpr.pgua.eic.tads.banco;
+package ifpr.entidades;
 
 //importações
 
@@ -62,7 +62,7 @@ public class ContaBancaria{
 
 
     //metodos
-    String depositar(double valor){
+    public String depositar(double valor){
 
         if(valor < 0){
             return "Valor inválido!";
@@ -71,7 +71,7 @@ public class ContaBancaria{
         return "ok";
     }
 
-    String sacar(double valor){
+    public String sacar(double valor){
         if(valor < 0){
             return "Valor inválido!";
             //return false;
@@ -87,7 +87,7 @@ public class ContaBancaria{
 
     }
 
-    String mostrarSaldo(){
+    public String mostrarSaldo(){
         String texto="";
 
         texto = "Agência: " + agencia +

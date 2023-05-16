@@ -1,6 +1,9 @@
-package ifpr.pgua.eic.tads.banco;
+package ifpr.controle;
 
 import java.util.ArrayList;
+
+import ifpr.entidades.ContaBancaria;
+import ifpr.entidades.Pessoa;
 
 public class Banco {
     
