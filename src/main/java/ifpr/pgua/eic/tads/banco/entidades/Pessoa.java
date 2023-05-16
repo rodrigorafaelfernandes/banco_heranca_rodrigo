@@ -1,4 +1,4 @@
-package ifpr.entidades;
+package ifpr.pgua.eic.tads.banco.entidades;
 
 public class Pessoa {
     

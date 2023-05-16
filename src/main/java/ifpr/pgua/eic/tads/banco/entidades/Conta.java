@@ -1,8 +1,8 @@
-package ifpr.entidades;
+package ifpr.pgua.eic.tads.banco.entidades;
 
 //importações
 
-public class ContaBancaria{
+public class Conta{
 
     //atributos
     private String agencia;
@@ -12,19 +12,19 @@ public class ContaBancaria{
 
 
 
-    public ContaBancaria(String agencia, String numero, Pessoa cliente){
+    public Conta(String agencia, String numero, Pessoa cliente){
         this.agencia = agencia;
         this.numero = numero;
         this.cliente = cliente;
     }
 
-    public ContaBancaria(String numero, Pessoa cliente){
+    public Conta(String numero, Pessoa cliente){
         this.agencia = "1234";
         this.numero = numero;
         this.cliente = cliente;
     }
 
-    public ContaBancaria(String agencia, String numero, Pessoa cliente, double saldo){
+    public Conta(String agencia, String numero, Pessoa cliente, double saldo){
         this.agencia = agencia;
         this.numero = numero;
         this.cliente = cliente;
@@ -87,7 +87,7 @@ public class ContaBancaria{
 
     }
 
-    public String mostrarSaldo(){
+    public String gerarExtrato(){
         String texto="";
 
         texto = "Agência: " + agencia +
@@ -98,4 +98,5 @@ public class ContaBancaria{
         return texto;
     }
 
+    
 }

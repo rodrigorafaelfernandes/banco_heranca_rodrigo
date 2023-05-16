@@ -1,16 +1,15 @@
 package ifpr.pgua.eic.tads.banco;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
-import ifpr.controle.Banco;
-import ifpr.entidades.ContaBancaria;
-import ifpr.entidades.Pessoa;
+import ifpr.pgua.eic.tads.banco.controle.Banco;
+import ifpr.pgua.eic.tads.banco.entidades.Conta;
+import ifpr.pgua.eic.tads.banco.entidades.Pessoa;
 
 public class App {
 
     static Scanner teclado = new Scanner(System.in);
-    static ContaBancaria conta;
+    static Conta conta;
 
     static Banco banco = new Banco("TADSBank");
 
@@ -76,7 +75,7 @@ public class App {
         String cpf;
         String numero;
         String agencia;
-        double saldoInicial;
+        
         
         System.out.println("Digite o cpf do cliente:");
         cpf = teclado.nextLine();
@@ -87,7 +86,7 @@ public class App {
 
         Pessoa pessoa = banco.buscarCliente(cpf);
         if(pessoa != null){
-            conta = new ContaBancaria(agencia,numero,pessoa);
+            conta = new Conta(agencia,numero,pessoa);
 
             System.out.println("************");
             
