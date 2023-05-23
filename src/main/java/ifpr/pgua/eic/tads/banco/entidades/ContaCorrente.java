@@ -51,7 +51,7 @@ public class ContaCorrente extends Conta
         @Override
         public String tipo()
         {
-            return super.tipo()+"Corrente";
+            return "Conta Corrente";
         }
 
 

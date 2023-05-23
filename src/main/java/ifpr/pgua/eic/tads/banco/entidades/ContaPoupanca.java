@@ -39,6 +39,11 @@ public class ContaPoupanca extends Conta
     @Override
     public String tipo()
     {
-        return super.tipo()+"Poupança";
-    }    
+        return "Conta Poupança";   
+    }     
+
+    public void render()
+    {
+        rendimento=rendimento+(saldo*txRendimento);
+    }
 }

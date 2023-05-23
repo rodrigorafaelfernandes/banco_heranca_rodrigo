@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import ifpr.pgua.eic.tads.banco.controle.Banco;
 import ifpr.pgua.eic.tads.banco.entidades.Conta;
+import ifpr.pgua.eic.tads.banco.entidades.ContaCorrente;
 import ifpr.pgua.eic.tads.banco.entidades.Pessoa;
 
 public class App {
@@ -86,7 +87,7 @@ public class App {
 
         Pessoa pessoa = banco.buscarCliente(cpf);
         if(pessoa != null){
-            conta = new Conta(agencia,numero,pessoa);
+            conta = new ContaCorrente(agencia,numero,pessoa,0,0);
 
             System.out.println("************");
             

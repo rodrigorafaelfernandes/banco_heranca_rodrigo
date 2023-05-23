@@ -2,7 +2,7 @@ package ifpr.pgua.eic.tads.banco.entidades;
 
 //importações
 
-public class Conta{
+public abstract class Conta{
 
     //atributos
     private String agencia;
@@ -98,9 +98,12 @@ public class Conta{
         return texto;
     }
 
-    public String tipo()
-    {
-        return "Conta";
-    }
+    public abstract String tipo();
     
+    //hook method
+    public String tipoCompleto()
+    {
+        return "Este objeto é do tipo "+tipo();
+    }
+       
 }

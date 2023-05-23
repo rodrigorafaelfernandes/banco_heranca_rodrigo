@@ -1,6 +1,10 @@
 package ifpr.pgua.eic.tads.banco;
 
 import ifpr.pgua.eic.tads.banco.entidades.ContaPoupanca;
+
+import java.util.ArrayList;
+
+import ifpr.pgua.eic.tads.banco.entidades.Conta;
 import ifpr.pgua.eic.tads.banco.entidades.ContaCorrente;
 import ifpr.pgua.eic.tads.banco.entidades.Pessoa;
 
@@ -9,6 +13,9 @@ public class AppTest
 
     public static void main(String[] args)
     {
+        ArrayList<Conta> contas= new ArrayList<>();
+              
+        
         Pessoa ze =new Pessoa("Zé", "0123", 25, 500);
         Pessoa chico = new Pessoa("Chico", "4567", 35, 1000);
 
@@ -27,8 +34,34 @@ public class AppTest
         System.out.println(retPoupanca);
         System.out.println(retContaCorrente);
 
-        System.out.println(poupanca.tipo());
-        System.out.println(corrente.tipo());
+        System.out.println(poupanca.tipoCompleto());
+        System.out.println(corrente.tipoCompleto());
+       
+       
+        contas.add(poupanca);
+        contas.add(corrente);
+
+        System.out.println(contas.size());
+        
+        for(Conta c:contas)
+        {
+            System.out.println(c.tipoCompleto());
+        }
+
+        for(Conta c:contas)
+        {
+            if(c instanceof ContaPoupanca)
+            {
+                ContaPoupanca var=(ContaPoupanca)c;
+                var.render();
+                System.out.println("Rendeu...");
+            }
+            else
+            {
+                System.out.println("Não Rendeu");
+            }
+        }
+
     }
 
 
