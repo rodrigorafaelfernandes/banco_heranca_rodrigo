@@ -26,13 +26,19 @@ public class ContaPoupanca extends Conta
         this.txRendimento = txRendimento;
     }    
 
-        @Override
-        public String gerarExtrato()
-        {
-            String texto="";
+    @Override
+    public String gerarExtrato()
+    {
+        String texto="";
 
-            texto =super.gerarExtrato();
-            texto+="txRendimento: "+txRendimento+" Rendimentos: "+rendimento;
-            return texto;
-        }
+        texto =super.gerarExtrato();
+        texto+="txRendimento: "+txRendimento+" Rendimentos: "+rendimento;
+        return texto;
+    }
+
+    @Override
+    public String tipo()
+    {
+        return super.tipo()+"Poupança";
+    }    
 }

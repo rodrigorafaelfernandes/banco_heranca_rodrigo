@@ -21,7 +21,14 @@ public class AppTest
 
         poupanca.setTxRendimento(0.00001);
 
+        String retPoupanca=poupanca.sacar(200);
+        String retContaCorrente=corrente.sacar(99);
 
+        System.out.println(retPoupanca);
+        System.out.println(retContaCorrente);
+
+        System.out.println(poupanca.tipo());
+        System.out.println(corrente.tipo());
     }
 
 

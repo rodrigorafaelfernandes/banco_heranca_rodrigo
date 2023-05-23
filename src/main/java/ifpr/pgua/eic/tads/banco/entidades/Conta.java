@@ -7,7 +7,7 @@ public class Conta{
     //atributos
     private String agencia;
     private String numero;
-    private double saldo=0;
+    protected double saldo=0;
     private Pessoa cliente;
 
 
@@ -98,5 +98,9 @@ public class Conta{
         return texto;
     }
 
+    public String tipo()
+    {
+        return "Conta";
+    }
     
 }

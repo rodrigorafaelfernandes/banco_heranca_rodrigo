@@ -21,13 +21,39 @@ public class ContaCorrente extends Conta
     }
 
     @Override
-        public String gerarExtrato()
-        {
-            String texto="";
+    public String gerarExtrato()
+    {
+        String texto="";
 
-            texto=super.gerarExtrato();
-            texto=texto+" limite: " + limite;
+        texto=super.gerarExtrato();
+        texto=texto+" limite: " + limite;
             
-            return texto;
+        return texto;
+    }
+
+    @Override
+    public String sacar(double valor)
+    {
+        if(valor < 0)
+        {
+            return "Valor Inválido!";
+        }        
+
+        if(valor > saldo+limite)
+        {
+            return "Saldo Insuficiente";
         }
+
+        saldo = saldo-valor;
+        return "Saldo Realizado";
+    }    
+
+        @Override
+        public String tipo()
+        {
+            return super.tipo()+"Corrente";
+        }
+
+
+
 }
