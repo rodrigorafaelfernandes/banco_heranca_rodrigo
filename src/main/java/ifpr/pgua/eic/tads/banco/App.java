@@ -7,14 +7,16 @@ import ifpr.pgua.eic.tads.banco.entidades.Conta;
 import ifpr.pgua.eic.tads.banco.entidades.ContaCorrente;
 import ifpr.pgua.eic.tads.banco.entidades.Pessoa;
 
-public class App {
+public class App 
+{
 
     static Scanner teclado = new Scanner(System.in);
     static Conta conta;
 
     static Banco banco = new Banco("TADSBank");
 
-    static String imprimirMenu(){
+    static String imprimirMenu()
+    {
         String str="";
         str += "###----###\n";
         str += "1 - Cadastrar conta\n";
@@ -31,7 +33,8 @@ public class App {
     }
 
 
-    static void cadastrarCliente(){
+    static void cadastrarCliente()
+    {
         String nome;
         String cpf;
         int idade;
@@ -49,7 +52,8 @@ public class App {
         banco.criarCliente(nome, cpf, idade, salario);
     }
 
-    static void buscarCliente(){
+    static void buscarCliente()
+    {
         String cpf;
 
         System.out.println("Digite o cpf:");
@@ -65,13 +69,15 @@ public class App {
         }
     }
 
-    static void listarClientes(){
+    static void listarClientes()
+    {
         System.out.println("####Lista de Clientes####");
         System.out.println(banco.listarClientes());
         System.out.println("######");
     }
 
-    static void criarConta(){
+    static void criarConta()
+    {
         
         String cpf;
         String numero;
@@ -101,7 +107,8 @@ public class App {
 
     }
 
-    static void sacar(){
+    static void sacar()
+    {
         double valor;
         String numero;
         String agencia;
@@ -123,7 +130,8 @@ public class App {
         System.out.println("************");
     }
 
-    static void depositar(){
+    static void depositar()
+    {
         double valor;
         String numero;
         String agencia;
@@ -144,12 +152,14 @@ public class App {
         System.out.println("************");
     }
 
-    static void mostrarDados(){
+    static void mostrarDados()
+    {
         
         System.out.println(banco.relatorio());
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
 
         int opcao=0;
 

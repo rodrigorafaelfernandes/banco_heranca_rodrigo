@@ -48,12 +48,9 @@ public class ContaCorrente extends Conta
         return "Saldo Realizado";
     }    
 
-        @Override
-        public String tipo()
-        {
-            return "Conta Corrente";
-        }
-
-
-
+    @Override
+    public String tipo()
+    {
+        return "Conta Corrente";
+    }
 }

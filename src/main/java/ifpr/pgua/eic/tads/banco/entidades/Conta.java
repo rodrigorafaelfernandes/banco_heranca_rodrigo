@@ -104,6 +104,5 @@ public abstract class Conta{
     public String tipoCompleto()
     {
         return "Este objeto é do tipo "+tipo();
-    }
-       
+    } 
 }
